@@ -1,14 +1,18 @@
 class CashRegister 
   attr_accessor :cash_register, :total, :discount, :items
   
-  def initialize(discount = 0)
+  def initialize(discount = nil)
     @total = 0 
-    @discount = discount/100
+    if discount = nil
+      @discount = 1 
+    else 
+      @discount = discount
+    end 
     @items = []
   end
   
   def add_item(item, amount, quantity = 1)
-    @total += amount * quantity * (1 - discount)
+    @total += amount * quantity #* (1 - discount)
     @items << item
     puts "After the discount, the total comes to $#{total}"
   end
