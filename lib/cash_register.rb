@@ -14,7 +14,7 @@ class CashRegister
     
   def apply_discount
       if @discount != nil
-      @total *= ((100.0 - discount.float)/100.0)
+      @total *= ((100.0 - discount.to_f)/100.0)
       end  
         puts "After the discount, the total comes to $#{total}"
   end
