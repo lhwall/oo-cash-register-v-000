@@ -8,7 +8,7 @@ class CashRegister
   end
   
   def add_item(item, amount, quantity = 1)
-    @total += amount * quantity #* (1 - discount)
+    @total += amount * quantity
     @items << item
     puts "After the discount, the total comes to $#{total}"
   end
