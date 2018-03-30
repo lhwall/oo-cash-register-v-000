@@ -8,11 +8,13 @@ class CashRegister
   end
   
   def add_item(item, amount, quantity = 1)
-    if @discount != nil
-      @total += amount * quantity* ((100 - discount)/100)
-    else
       @total += amount * quantity
-    end 
+  end  
+    
+  def apply_discount
+      if @discount != nil
+      @total += amount * quantity* ((100 - discount)/100)
+    
     
     @items << item
     puts "After the discount, the total comes to $#{total}"
