@@ -3,7 +3,7 @@ class CashRegister
   
   def initialize
     @cash_register = 
-  
+  end
   
   
 end 
