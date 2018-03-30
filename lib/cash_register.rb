@@ -32,6 +32,7 @@ class CashRegister
     else @total -= amount*quantity * ((100.0 - discount.to_f)/100.0)
     end
     quantity.times [@items.pop()]
+    binding.pry
   end
   
 end 
