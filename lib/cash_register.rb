@@ -28,7 +28,7 @@ class CashRegister
     quantity = last_transaction[2]
     if @discount != nil
     @total -= amount * quantity 
-  else 
+  else @total -= amount*quantity * ((100.0 - discount.to_f)/100.0)
     end
     quantity.times [@items.pop()]
   end
