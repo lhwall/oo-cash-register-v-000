@@ -5,6 +5,7 @@ class CashRegister
     @total = 0 
     @discount = discount
     @items = []
+    @last_transaction = []
   end
   
   def add_item(item, amount, quantity = 1)
@@ -28,7 +29,7 @@ class CashRegister
     quantity = last_transaction[2]
     if @discount != nil
     @total -= amount * quantity 
-  else @total -= amount*quantity * ((100.0 - discount.to_f)/100.0)
+    else @total -= amount*quantity * ((100.0 - discount.to_f)/100.0)
     end
     quantity.times [@items.pop()]
   end
