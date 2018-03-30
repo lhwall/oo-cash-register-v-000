@@ -28,5 +28,6 @@ class CashRegister
     quantity = last_transaction[2]
     @total -= amount * quantity
     quantity.times [@items.pop()]
+  end
   
 end 
