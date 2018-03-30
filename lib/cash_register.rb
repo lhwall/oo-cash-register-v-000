@@ -16,7 +16,7 @@ class CashRegister
       if @discount != nil
       @total *= ((100.0 - discount.to_f)/100.0)
       end  
-        puts "After the discount, the total comes to $#{total}"
+        puts "After the discount, the total comes to $#{total}."
   end
   
 end 
